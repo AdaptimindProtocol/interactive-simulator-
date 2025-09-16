@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptimind Protocol - Interactive Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Adaptimind Protocol</h1>
+            <h2>Interactive Simulator</h2>
+        </header>
+
+        <div class="main-content">
+            <!-- Main Network Column -->
+            <div class="network-column" id="main-network">
+                <h3>Main Network</h3>
+                <div class="stats">
+                    <div class="stat-item">
+                        <label>Transactions/sec (TPS)</label>
+                        <div class="value" id="main-tps">1,500</div>
+                    </div>
+                    <div class="stat-item">
+                        <label>Avg. Gas Fee</label>
+                        <div class="value" id="main-gas">$0.01</div>
+                    </div>
+                    <div class="stat-item">
+                        <label>Network Load</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="main-load-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-log" id="main-activity">
+                    <p>System nominal. Awaiting transactions...</p>
+                </div>
+            </div>
+
+            <!-- AI Oracle Column -->
+            <div class="oracle-column">
+                <div class="oracle-visual">
+                    <div class="core" id="oracle-core"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                </div>
+                <div id="oracle-status">AI-ORACLE: MONITORING</div>
+                <button id="launch-app-btn">Launch Heavy dApp (Game)</button>
+            </div>
+
+            <!-- Dynamic Shard Column (Initially Hidden) -->
+            <div class="network-column dynamic-shard" id="dynamic-shard">
+                <h3>Dynamic Shard #1</h3>
+                <div class="stats">
+                    <div class="stat-item">
+                        <label>Transactions/sec (TPS)</label>
+                        <div class="value" id="shard-tps">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <label>Avg. Gas Fee</label>
+                        <div class="value" id="shard-gas">$0.00</div>
+                    </div>
+                     <div class="stat-item">
+                        <label>Network Load</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="shard-load-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-log" id="shard-activity">
+                    <p>Shard inactive.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
